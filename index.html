@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero Waste</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff; /* Light blue background */
+            color: #333;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            background-color: #007acc; /* Darker blue */
+            padding: 10px;
+            color: white;
+        }
+        header img {
+            height: 50px;
+            margin-right: 15px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            cursor: pointer; /* Change cursor to pointer */
+        }
+        /* Dropdown menu styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #e0f7fa; /* Light blue dropdown background */
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: #007acc;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        section {
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+            background-color: #e0f7fa; /* Light blue section background */
+            display: none; /* Initially hidden */
+        }
+        h2 {
+            color: #007acc; /* Section headings in dark blue */
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #007acc;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="c:\Users\DELL\Downloads\WhatsApp Image 2024-10-11 at 2.04.46 AM.jpeg" alt="Zero Waste Logo">
+        <h1>Zero Waste</h1>
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <a onclick="toggleSection('home')">Home</a>
+                    <div class="dropdown-content">
+                        <a onclick="toggleSubheading('about')">About Us</a>
+                        <a onclick="toggleSubheading('goals')">Our Goals</a>
+                        <a onclick="toggleSubheading('volunteering')">Volunteering Benefits</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a onclick="toggleSection('awareness')">Awareness</a>
+                    <div class="dropdown-content">
+                        <a onclick="toggleSubheading('agricultural')">Agricultural Waste</a>
+                        <a onclick="toggleSubheading('industrial')">Industrial Waste</a>
+                        <a onclick="toggleSubheading('resources')">Learning Resources</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a onclick="toggleSection('programs')">Our Programs</a>
+                    <div class="dropdown-content">
+                        <a onclick="toggleSubheading('challenges')">Challenges</a>
+                        <a onclick="toggleSubheading('events')">Events</a>
+                        <a onclick="toggleSubheading('initiatives')">Initiatives</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a onclick="toggleSection('success')">Success Stories</a>
+                    <div class="dropdown-content">
+                        <a onclick="toggleSubheading('our_stories')">Our Success Stories</a>
+                        <a onclick="toggleSubheading('share_story')">Share Your Story</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a onclick="toggleSection('contacts')">Contacts</a>
+                    <div class="dropdown-content">
+                        <a onclick="toggleSubheading('user_contact')">User Contact</a>
+                        <a onclick="toggleSubheading('supporter_contact')">Supporter Contact</a>
+                        <a onclick="toggleSubheading('company_contact')">Company Contact</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Home</h2>
+        <h3 id="about" style="display:none;">About Us</h3>
+        <p style="display:none;">Welcome to the Zero Waste Initiative,The "Zero Waste" initiative is an environmental movement aimed at addressing the pollution caused by agricultural and industrial waste.<br> We believe that awareness and education are the foundations for change, so we strive to educate the community about the environmental impacts of this waste. <br>We provide accessible educational resources and bring the community together through events and competitions to promote volunteerism. Through this initiative, we work to present innovative solutions and enhance collaboration with recycling companies to ensure a more sustainable future.</p>
+        <h3 id="goals" style="display:none;">Our Goals</h3>
+        <p style="display:none;">The "Zero Waste" initiative aims to achieve several key goals:<br>
+            1. Raise Awareness: We work to educate the public about the environmental impact of agricultural and industrial waste, providing accessible learning materials and resources.
+            <br>2. Encourage Volunteerism: Through competitions and campaigns, we promote environmental volunteering with rewards such as certificates and medals.
+            <br> 3. Report Pollution: We enable individuals to report pollution, helping us take collective action to protect our planet.
+            <br> 4. Share Success Stories: We highlight the achievements of environmental initiatives, showcasing innovative solutions and community efforts.
+            <br>  5. Promote Innovation: We provide opportunities to submit projects aimed at solving environmental issues, such as recycling plastic waste or addressing pollution problems.
+            <br> 6. Collaborate with Recycling Companies: We aim to partner with recycling companies to create a network of sustainable solutions.</p>
+        <h3 id="volunteering" style="display:none;">Benefits of Volunteering</h3>
+        <p style="display:none;">Volunteering is a great way to contribute to environmental protection while gaining valuable experience. <br>Here are some of the benefits:
+            <br>
+            1. Make a Difference: By volunteering, you directly contribute to reducing pollution and creating a cleaner, healthier environment.
+            <br>
+            2. Learn New Skills: Volunteering helps you develop new skills, including teamwork, leadership, and problem-solving.
+            <br>
+            3. Community Engagement: Volunteering brings people together, creating strong community bonds and networks.
+            <br>
+            4. Recognition: After each event or significant contribution, you'll receive a volunteer participation certificate from "Zero Waste" for your efforts in protecting the environment.
+            
+            <br>
+            Group Events and Personal Actions<br>
+            We organize group events where you can join others to clean up agricultural waste like rice husks or industrial waste such as plastics. These events help you make a significant impact and gain recognition as a dedicated environmental volunteer.
+            Additionally, you can participate anytime by collecting harmful products that are damaging the environment. Your contribution is invaluable, and you'll still earn a volunteer certificate for making a difference in your community.
+            
+            School Initiatives
+            <br>
+            If you're passionate about protecting the environment, you can even start environmental initiatives at your school. By raising awareness and organizing eco-friendly activities, you'll also earn a certificate acknowledging your leadership and efforts.
+            <br>
+            Special Honors
+            <br>
+            We value your commitment to environmental protection. For the most dedicated volunteers, we offer special honors:
+            <br>
+            1. Bronze Honor: Awarded for consistent participation and contribution.
+            <br>
+            2. Silver Honor: Given to those who lead initiatives and significantly influence others.
+            <br>
+            3. Gold Honor: Our highest recognition, reserved for volunteers who go above and beyond in their efforts to protect the environment and inspire others.
+            <br>
+            Get involved, and let's protect the planet together!.</p>
+    </section>
+
+    <section id="programs">
+        <h2>Our Programs</h2>
+        <h3 id="challenges" style="display:none;">Challenges</h3>
+        <p style="display:none;">Join Us in Local Waste Reduction Challenges!
+            <br>
+            In today's world, tackling waste is crucial for a sustainable future. One of the best ways to make a difference is by participating in local waste reduction challenges. These initiatives not only help the environment but also foster community spirit.
+            <br>
+            Consider joining challenges like collecting plastic bottles or rice straw. Each bottle collected reduces pollution, while rice straw can enrich our soil instead of being burned. These small actions collectively create a significant impact.
+            <br>
+            Additionally, collecting food waste for composting transforms waste into valuable resources that benefit local gardens. Engaging in these activities connects you with nature and your community.
+            <br>
+            Participating in these challenges is an opportunity to educate yourself and others about waste management practices. Every effort counts, and your involvement can inspire friends and neighbors to take action as well.
+            <br>
+            Let's come together to tackle waste in our communities. Join us in these local challenges and help create a cleaner, greener future! Your participation matters!
+            <br>
+            
+            
+            1. Collecting Plastic Bottles
+            <br>
+            Impact: Reduces environmental pollution and raises awareness about the importance of minimizing plastic use.
+            
+            <br>
+            2. Collecting Rice Straw
+            <br>
+            Impact: Reduces the burning of rice straw, helping to decrease air pollution, and can be used as fertilizer.
+            
+            <br>
+            3. Collecting Metal Cans
+            <br>
+            Impact: Reduces pollution in public spaces and helps preserve natural landscapes while recovering metals.
+            <br>
+            
+            4. Collecting Food Waste
+            <br>
+            Impact: Reduces the amount of waste going to landfills and can be used as compost.
+            <br>
+            
+            5. Collecting Organic Materials
+            <br>
+            Impact: Improves soil quality and reduces greenhouse gas emissions from organic material decomposition.
+            
+            <br>
+            6. Collecting Plastic Waste
+            <br>
+            Impact: Protects marine environments and raises community awareness about the need to limit plastic use.
+            
+            <br>
+            7. Collecting Non-Biodegradable Waste
+            <br>
+            Impact: Reduces litter in neighborhoods and helps improve waste management practices.
+            
+            <br>
+            8. Collecting Plastic Bags
+            <br>
+            Impact: Reduces soil and water pollution and promotes a culture of using reusable bags.
+            
+            <br>
+            9. Collecting Old Tires
+            <br>
+            Impact: Reduces environmental risks associated with tire accumulation and helps recover materials.
+            <br>
+            
+            10. Collecting Fruit and Vegetable Scraps
+            <br>
+            Impact: Enhances compost production, improving soil fertility.
+            
+            <br>
+            11. Collecting Old Fabrics
+            <br>
+            Impact: Reduces waste and promotes the use of recyclable materials in the industry.
+            <br>
+            
+            12. Collecting Electronic Waste
+            <br>
+            Impact: Protects the environment from harmful materials in electronic devices and promotes resource recovery.
+            <br>
+            
+            13. Collecting Construction Waste
+            <br>
+            Impact: Reduces clutter at construction sites and aids in recovering usable materials.
+            <br>
+            
+            14. Collecting Garden Waste
+            <br>
+            Impact: Reduces waste and helps in producing organic compost.
+            
+            <br>
+            15. Collecting Used Batteries
+            <br>
+            Impact: Protects the environment from toxic materials in batteries and promotes metal recycling.
+            <br>
+            
+            16. Collecting Used Cooking Oils
+            <br>
+            Impact: Reduces water pollution and can be reused in bio-diesel production.
+            
+            <br>
+            17. Collecting Packaging Waste
+            <br>
+            Impact: Reduces waste and helps improve product sustainability.
+            <br>
+            
+            18. Collecting Animal Waste
+            <br>
+            Impact: Can be used as organic fertilizer, improving soil quality.
+            <br>
+            
+            19. Collecting Agricultural Waste Such as Crop Residues
+            <br>
+            Impact: Aids in better soil management and reduces environmental pollution.
+            
+            <br>
+            20. Collecting Solid Waste from Factories
+            <br>
+            Impact: Reduces negative environmental impacts and helps manage waste more effectively. </p>
+        <h3 id="events" style="display:none;">Events</h3>
+        <p style="display:none;">Join Us for a Unified Purpose!
+            <br>
+            We are excited to announce that we are organizing a series of upcoming events focused on a single goal: to create a cleaner, healthier environment for our community! These events will provide a fantastic opportunity for everyone to come together, collaborate, and make a positive impact.
+            <br>
+            Our mission is clear: to reduce waste, promote sustainability, and raise awareness about environmental issues that affect us all. We believe that collective action can lead to significant change. By participating in these events, you will not only contribute to a vital cause but also connect with like-minded individuals who share your passion for making a difference.
+            <br>
+            Each event will be designed to engage and empower participants, offering various activities ranging from community clean-ups to workshops on sustainable practices. We want everyone to feel involved and inspired to take action in their own lives.
+            <br>
+            Stay tuned for more details about our upcoming events! Together, we can work towards a brighter, greener future. Let’s unite for this important cause and show that together, we can achieve great things!</p>
+        <h3 id="initiatives" style="display:none;">Initiatives</h3>
+        <p style="display:none;"> Join the Fight Against Waste: Get Involved!
+            <br>
+            Participating in waste management challenges is a powerful way to make a difference in our communities and the environment. Every small action counts, whether it’s collecting plastic bottles, gathering agricultural waste, or organizing cleanup events. These efforts not only reduce waste but also promote teamwork and community spirit.
+            <br>
+            By joining these challenges, we educate ourselves and others about the importance of waste management. We learn how our actions impact the planet and develop sustainable habits for the future. Furthermore, when young people see adults taking initiative, they are inspired to care for the environment too.
+            <br>
+            Let’s come together to tackle waste management challenges. Your participation can lead to positive change, strengthen our communities, and inspire future generations. Get involved today and help create a cleaner, healthier planet!
+            <br>
+            
+            1. Community Workshops: Organizing workshops to educate the community about waste management practices.
+            
+            <br>
+            2. Social Media Campaigns: Sharing information about the impact of waste on social media platforms.
+            
+            <br>
+            3. Community Cleanup Days: Organizing events to collect waste in public areas.
+            
+            <br>
+            4. School Projects: Encouraging schools to implement educational projects about waste.
+            
+            <br>
+            5. Local Exhibitions: Hosting exhibitions that showcase innovative waste management solutions.
+            
+            <br>
+            6. Online Platforms: Developing a website or app for sharing ideas on waste management.
+            
+            <br>
+            7. Training Programs: Offering training for farmers on how to reduce agricultural waste.
+            <br>
+            
+            8. Lecture Series: Organizing lectures with experts in waste management.
+            
+            <br>
+            9. Innovation Competitions: Hosting competitions for the best ideas in waste management.
+            
+            <br>
+            10. Educational Materials: Distributing booklets containing information on waste reduction.
+            
+            <br>
+            11. University Awareness Campaigns: Organizing campaigns to educate students about the importance of waste management.
+            
+            <br>
+            12. Field Visits: Organizing visits to waste management facilities to educate the public about the processes used.
+            
+            <br>
+            13. Public Awareness Days: Organizing public events to raise awareness about waste and its impact.
+            <br>
+            
+            14. Sharing Success Stories: Publishing local success stories in waste management.
+            <br>
+            
+            15. Collaboration with Businesses: Partnering with companies to promote sustainable waste management practices.
+            
+            <br>
+            16. Mobile Apps: Developing apps to facilitate waste management at home.
+            <br>
+            
+            17. Checklists: Creating checklists to help individuals manage waste.
+            
+            <br>
+            18. Knowledge Sharing through Blogs: Writing blogs focusing on waste management topics.
+            <br>
+            
+            19. Research and Case Studies: Conducting research on waste management and sharing findings with the community.
+            
+            <br>
+            20. Local Marketing of Best Practices: Encouraging local businesses to adopt good waste management practices.
+            <br> Join Us for a Unified Purpose!
+            <br>
+            We are excited to announce that we are organizing a series of upcoming events focused on a single goal: to create a cleaner, healthier environment for our community! These events will provide a fantastic opportunity for everyone to come together, collaborate, and make a positive impact.
+            <br>
+            Our mission is clear: to reduce waste, promote sustainability, and raise awareness about environmental issues that affect us all. We believe that collective action can lead to significant change. By participating in these events, you will not only contribute to a vital cause but also connect with like-minded individuals who share your passion for making a difference.
+            <br>
+            Each event will be designed to engage and empower participants, offering various activities ranging from community clean-ups to workshops on sustainable practices. We want everyone to feel involved and inspired to take action in their own lives.
+            <br>
+            Stay tuned for more details about our upcoming events! Together, we can work towards a brighter, greener future. Let’s unite for this important cause and show that together, we can achieve great things!<br> You can share your achievements here to receive an official certificate <a href="https://forms.gle/B9i2bKpRVmzyphpC9" target="_blank"><br>
+                Here you can sell agricultural or industrial waste.
+                <a href="https://forms.gle/PiDQx4oGCJ9RRRFw6"target="_blank">
+                <br>
+                Here you can report pollution.
+                <br>
+                <a href="https://forms.gle/4wUoULgkQHebWacP7"target="_blank"> 
+                    Write your Achievement</h2>
+                </p>
+
+    </section>
+    <section id="awareness">
+        <h2>Awareness</h2>
+        <h3 id="agricultural" style="display:none;">About Agricultural Waste</h3>
+        <br>
+
+        <video width="600" height="400" controls>
+            <source src="c:\Users\DELL\Downloads\WhatsApp Video 2024-10-15 at 1.43.24 PM.mp4" type="video/mp4">
+          </video>
+        <p style="display:none;">
+            
+            
+            Agricultural waste is one of the significant environmental challenges facing the world today, as it constitutes a large percentage of the total waste produced. This waste includes crop residues, rice husks, leaves, and spoiled fruits and vegetables, along with other materials generated from agricultural activities.
+            <br>
+            Environmental Impacts of Agricultural Waste
+            <br>
+            1. Pollution: When agricultural waste is left untreated, it can lead to soil and water pollution. Improper decomposition of this waste can release greenhouse gases and affect air quality.
+            
+            <br>
+            2. Resource Loss: Agricultural waste represents a waste of valuable resources. Many of these materials can be reused in composting or as raw materials in other industries.
+            <br>
+            
+            3. Impact on Biodiversity: Accumulated agricultural waste can lead to habitat degradation, adversely affecting biodiversity.
+            
+            <br>
+            
+            Managing Agricultural Waste
+            <br>
+            Effective management of agricultural waste requires innovative strategies aimed at minimizing its negative environmental impact. Here are some proposed solutions:
+            <br>
+            1. Recycling: Crop residues and organic waste can be transformed into compost, helping to improve soil fertility and reduce the need for chemical fertilizers.
+            
+            <br>
+            2. Waste-to-Energy Conversion: Techniques such as anaerobic digestion can be used to convert agricultural waste into bioenergy, contributing to a reduction in reliance on conventional energy sources.
+            
+            <br>
+            3. Awareness and Education: Raising awareness among farmers and local communities about the importance of managing agricultural waste and its impact on the environment can encourage sustainable practices.
+            
+            <br>
+            
+            The "Zero Waste" Initiative and Its Role in Addressing Agricultural Waste
+            <br>
+            As part of our "Zero Waste" initiative, we work to promote awareness about the dangers of agricultural waste and the need for effective management. We provide educational resources and invite the community to participate in volunteer events to clean the environment. Our goal is to encourage farmers and communities to adopt sustainable solutions for handling agricultural waste and contribute to creating a healthier environment.
+            <br>
+            By collaborating with specialized recycling companies, we aim to build an effective network that enhances the sustainability of these resources and reduces their negative impact on the environment. Join us in these efforts, and together, let's build a cleaner and more sustainable future for everyone</p>
+        <h3 id="industrial" style="display:none;">About Industrial Waste</h3>
+        <p style="display:none;">Industrial waste is one of the prominent environmental issues that affect human health and the environment. This waste includes a wide range of materials produced during manufacturing and production processes, such as chemicals, heavy metals, oils, plastics, and waste generated from construction and demolition activities.
+            <br>
+            Environmental Impacts of Industrial Waste
+            <br>
+            1. Water Pollution: Industrial waste is a major source of water pollution, as toxic materials can seep into rivers and lakes, affecting aquatic life and threatening the health of local communities.
+            <br>
+            
+            2. Air Pollution: Industrial processes may release harmful gases and particulate matter into the air, leading to deteriorating air quality and an increase in respiratory illnesses among the population.
+            
+            <br>
+            3. Soil Degradation: If not managed properly, industrial waste can leach chemicals into the soil, causing pollution that affects crop growth and leads to a loss of biodiversity.
+            
+            <br>
+            
+            Managing Industrial Waste
+            <br>
+            Effective management of industrial waste requires strategies to minimize its negative environmental impact. Here are some proposed solutions:
+            <br>
+            1. Recycling: Many industrial materials, such as metals and plastics, can be recycled, reducing waste volume and promoting sustainability.
+            
+            <br>
+            2. Waste Reduction: Encouraging companies to adopt clean manufacturing practices and improve production processes to minimize waste generation.
+            
+            <br>
+            3. Safe Disposal: Establishing effective systems for safely disposing of industrial waste, including incineration or burial in specially designed landfills, while considering environmental safety.
+            
+            <br>
+            4. Awareness and Education: Educating companies and local communities about the importance of managing industrial waste and ways to mitigate its negative impacts.
+            
+            
+            <br>
+            The "Zero Waste" Initiative and Its Role in Addressing Industrial Waste
+            <br>
+            As part of our "Zero Waste" initiative, we work to promote awareness of the dangers of industrial waste and the need for effective management. We provide educational resources and organize volunteer events to encourage community participation in environmental cleanup efforts.
+            <br>
+            We aim to collaborate with specialized recycling companies to build an effective network that enhances resource sustainability and reduces the negative impacts of industrial waste on the environment.
+            <br>
+            Join us in these efforts, and together, let’s build a cleaner and more sustainable future for everyone.</p>
+        <h3 id="resources" style="display:none;">Learning Resources</h3>
+        <p style="display:none;">(Websites)<br>
+            1. Food and Agriculture Organization (FAO). (2018). The State of Food and Agriculture 2018: Rural Transformations and the Role of Agriculture. Retrieved from FAO <br> Websitehttps:<a href="//www.fao.org/publications/sofa/2018/en/" target="_blank"></a><br>
+            2. World Health Organization (WHO). (2020). Health and Environment: A Guide to the Links Between Health and Environmental Hazards. Retrieved from WHO <br> Websitehttps:<a href="//www.who.int/publications/i/item/health-and-environment" target="_blank"></a><br>
+            3. United Nations Environment Programme (UNEP). (2016). Global Waste Management Outlook. Retrieved from UNEP  <br> Websitehttps:<a href="//www.unep.org/resources/report/global-waste-management-outlook" target="_blank"></a>" target="_blank"><br>
+            4. International Journal of Environmental Research and Public Health. (2021). Agricultural Waste Management: Current Challenges and Future Perspectives. Retrieved from MDPI <br> Website https:<a href="//www.mdpi.com/journal/ijerph" target="_blank"></a><br>
+            5. Environmental Protection Agency (EPA). (2019). Sustainable Management of Food Basics. Retrieved from EPA <br> Website <a href="https://www.epa.gov/sustainable-management-food" target="_blank"></a><br>
+            6. World Bank. (2021). Waste Management in Urban Areas: A Global Perspective. Retrieved from World Bank <br> Website <a href="https://www.worldbank.org/en/topic/wastemanagement" target="_blank"></a><br>
+            7. International Solid Waste Association (ISWA). (2020). Waste Management and Circular Economy: Best Practices and Guidelines. Retrieved from ISWA <br> Website <a href="https://www.iswa.org/home/" target="_blank"></a><br>
+            8. Kumar, R., & Bhattacharya, P. (2022). Innovations in Waste Management: Sustainable Approaches for Agriculture and Industry. In Journal of Cleaner Production. Retrieved from ScienceDirect <br><a href="https://www.sciencedirect.com/journal/journal-of-cleaner-production" target="_blank"></a> <br> (Articles)
+            <br>
+            1. "Agricultural Waste Management: A Review" <br>
+            Summary: This article reviews strategies for managing agricultural waste and modern techniques used in this field. <br>
+            [<a href="https://www.sciencedirect.com/science/article/pii/S0961953414000523" target="_blank"></a>]
+            <br>
+            
+            2. "Industrial Waste Management: Practices and Innovations" <br>
+            Summary: This article discusses best practices and innovations in industrial waste management and their environmental impact. <br>
+            [<a href="https://www.mdpi.com/2071-1050/12/6/2495" target="_blank"></a>]
+            <br>
+            
+            3. "Waste Management in Agriculture: A Systematic Review" <br>
+            Summary: This article provides a comprehensive review of waste management techniques in the agricultural sector and their sustainability impact. <br>
+            [<a href="https://www.mdpi.com/2071-1050/12/1/70" target="_blank"></a>]
+            <br>
+            
+            4. "The Environmental Impact of Industrial Waste" <br>
+            Summary: This article reviews the environmental impact of industrial waste and suggests strategies to mitigate damage. <br>
+            [<a href="https://www.researchgate.net/publication/320012925_The_Environmental_Impact_of_Industrial_Waste" target="_blank"></a>]
+            <br>
+            
+            5. "Challenges in Agricultural Waste Management" <br>
+            Summary: This article discusses the challenges facing agricultural waste management and proposed methods to improve the situation. <br>
+            [<a href="https://www.frontiersin.org/articles/10.3389/fenvs.2021.667985/full" target="_blank"></a>]
+            <br>
+            
+            6. "Innovative Solutions for Managing Industrial Waste" <br>
+            Summary: This article explores innovative solutions for managing industrial waste and how they can be applied across various industries. <br>
+            [<a href="https://www.sciencedirect.com/science/article/pii/S0959652621007974" target="_blank"></a>] <br>
+            
+            
+            7. "Understanding Agricultural Waste: Sources and Management Techniques" <br>
+            Summary: This article provides an overview of sources of agricultural waste and the techniques used to manage it. <br>
+            [<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6138999/" target="_blank"></a>] <br> (Books)
+            1. "Waste Management Practices: Municipal, Hazardous, and Industrial" <br>
+            Author: John Pichtel <br>
+            Year of Publication: 2014 <br>
+            Publisher: CRC Press <br>
+            [<a href="https://www.routledge.com/Waste-Management-Practices-Municipal-Hazardous-and-Industrial/Pichtel/p/book/9781466572824" target="_blank"></a> ] <br>
+            
+            
+            2. "Agricultural Waste Management: A Comprehensive Guide" <br>
+            Author: R. L. H. De Boer <br>
+            Year of Publication: 2018 <br>
+            Publisher: Wiley-Blackwell <br>
+            [<a href="https://www.wiley.com/en-us/Agricultural+Waste+Management%3A+A+Comprehensive+Guide-p-9781119155977" target="_blank"></a>]<br>
+            
+            
+            3. "Industrial Waste: A Handbook for Management" <br>
+            Author: David J. C. Simmonds <br>
+            Year of Publication: 2016 <br>
+            Publisher: Springer <br>
+            [<a href="https://link.springer.com/book/10.1007/978-3-319-26843-6" target="_blank"></a>] <br>
+            
+            
+            4. "Waste: A Handbook for Management" <br>
+            Author: D. W. B. Jones <br>
+            Year of Publication: 2017 <br>
+            Publisher: Springer <br>
+            [<a href="https://link.springer.com/book/10.1007/978-3-319-59290-4" target="_blank"></a> ] <br>
+            
+            
+            5. "Circular Economy: Global Perspectives, Applications and Benefits" <br>
+            Authors: M. M. S. A. M. K. B. Z. K. M. S. H. L. B. A. P. M. H. D. N. A. K. G. J. S. L. M. H. <br>
+            Year of Publication: 2021<br>
+            Publisher: Springer <br>
+            [<a href="https://link.springer.com/book/10.1007/978-3-030-51529-5" target="_blank"></a>] <br>
+            
+            
+            6. "Waste Management: Concepts and Technologies" <br>
+            Authors: Shweta Bansal & Rakesh Kumar <br>
+            Year of Publication: 2021 <br>
+            Publisher: Springer <br>
+            [<a href="https://link.springer.com/book/10.1007/978-3-030-48783-1" target="_blank"></a>] <br>
+            
+            
+            7. "Handbook of Recycling: State-of-the-art for Practitioners, Engineers, and Scientists" <br>
+            Author: Elias R. D. K. H. M. M. R. E. K. <br>
+            Year of Publication: 2014 <br>
+            Publisher: Elsevier <br>
+            [<a href="https://www.elsevier.com/books/handbook-of-recycling/9780123965050" target="_blank"></a>] <br> </p>
+    </section>
+
+    <section id="success">
+        <h2>Success Stories</h2>
+    
+        <!-- Hidden sections initially -->
+        <h3 id="our_stories" style="display:none;">Our Success Stories</h3>
+        <p style="display:none;">
+            Our survival stories address the human experiences of facing challenges, reflecting individuals' ability to overcome difficulties and leave a positive impact on society. Through collective initiatives, such as beach cleanup campaigns and waste reduction projects, we see how collaborative efforts can make a real difference in the environment.
+            <div style="display: flex; gap: 10px;">
+                <img src="c:\Users\DELL\Downloads\WhatsApp Image 2024-10-15 at 11.35.16 AM.jpeg" width="200" height="200" alt="Image 1" />
+                <img src="c:\Users\DELL\Downloads\WhatsApp Image 2024-10-15 at 11.35.16 AM (1).jpeg" width="200" height="200" alt="Image 2" />
+                <img src="c:\Users\DELL\Downloads\WhatsApp Image 2024-10-15 at 11.35.15 AM.jpeg" width="200" height="200" alt="Image 3" />
+            </div>
+            <br>
+            These stories demonstrate that crises, such as climate change and pandemics, can inspire individuals to work together. Each experience represents a new opportunity to create positive change, and thus, sharing our experiences can encourage others to join our efforts.
+            <br>
+            We must continue to write these stories and inspire others to contribute to improving our world, making every impactful event a new beginning for a better future.
+        </p>
+    
+        <h3 id="share_story" style="display:none;">Share Your Success Story</h3>
+        <p style="display:none;">
+            We invite you to share your success story on our platform! Your unique experiences and achievements can inspire others and contribute to a supportive community. Whether you've overcome personal challenges, initiated a community project, or made a positive impact in any field, your journey can motivate others to pursue their dreams. By sharing your story, you not only celebrate your success but also empower others to face their challenges with courage.
+            Join us in spreading positivity and inspiration—share your story today! <a href="https://forms.gle/eVEAxqCziwui6EDPA" target="_blank">Click here to share your story</a>.
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Zero Waste</p>
+    </footer>
+
+    <script>
+        function toggleSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => section.style.display = 'none');
+
+            // Show the selected section
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+        }
+
+        function toggleSubheading(subheadingId) {
+            // Get the subheading and its corresponding paragraph
+            const subheading = document.getElementById(subheadingId);
+            const paragraph = subheading.nextElementSibling;
+
+            // Toggle visibility of the subheading and paragraph
+            if (subheading && paragraph) {
+                const isDisplayed = subheading.style.display === 'block';
+                subheading.style.display = isDisplayed ? 'none' : 'block';
+                paragraph.style.display = isDisplayed ? 'none' : 'block';
+            }
+        }
+
+        // Show the home section by default
+        toggleSection('home');
+    </script>
+</body>
+</html>
