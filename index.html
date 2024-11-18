@@ -13,6 +13,64 @@
             background-color: #f0f8ff; /* Light blue background */
             color: #333;
         }
+        .container {
+  display: flex;
+  flex-direction: row; /* يظهر كمصفوفة على الشاشات الكبيرة */
+  gap: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+/* Media Query لأجهزة التابلت (عرض أقل من 768px) */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* يتحول إلى عمودي */
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+/* Media Query للهواتف (عرض أقل من 480px) */
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  nav ul li {
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
         header {
             display: flex;
             align-items: center;
@@ -126,7 +184,7 @@
             </ul>
         </nav>
     </header>
-
+   
     <section id="home">
         <h2>Home</h2>
         <h3 id="about" style="display:none;">About Us</h3>
@@ -171,6 +229,112 @@
             <br>
             Get involved, and let's protect the planet together!.</p>
     </section>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Zero Waste Initiative</title>
+        <style>
+            section {
+                margin: 20px;
+            }
+            h3 {
+                cursor: pointer;
+                color: #007bff;
+            }
+        </style>
+    </head>
+    <body>
+    
+    <!-- First Code (Contact Section) -->
+    <section id="contacts">
+        <h2>Contact Us</h2>
+        <h3 id="user_contact">User Contact</h3>
+        <p id="user_contact_text" style="display:none;">
+            If you would like to get in touch with us, we are here to listen! Whether you have questions, suggestions, or would like to share your experience, we welcome your communication. You can reach us via email at <a href="mailto:zerowaste345@gmail.com">zerowaste345@gmail.com</a>, and we will respond as soon as possible. We believe in the importance of every voice in our community and look forward to hearing your opinions and ideas. Don’t hesitate to reach out to us—together, we can achieve our goals and tackle challenges! 
+            <br><a href="https://forms.gle/P4QaTt4YyUEAYpSN9" target="_blank">Click here</a> to access our form.
+        </p>
+    
+        <h3 id="supporter_contact">Supporter Contact</h3>
+        <p id="supporter_contact_text" style="display:none;">
+            If you are interested in supporting our efforts and contributing to our goals, we invite you to connect with us! Community support is vital to the success of any initiative. Your ideas, resources, or experiences can greatly enhance our work. Whether you’re looking to provide support or join as an ally, we are excited to explore how you can make a difference. Reach out at <a href="mailto:zerowaste345@gmail.com">zerowaste345@gmail.com</a> or <a href="https://forms.gle/Hdc4GthY7HwjSP5M9" target="_blank">click here</a> to learn more about how to get involved.
+        </p>
+    
+        <h3 id="company_contact">Recycling Company Contact</h3>
+        <p id="company_contact_text" style="display:none;">
+            If you are a recycling company interested in partnering with us, we would love to hear from you! Our goal is to promote sustainability and reduce waste in our communities. With your expertise, we can make a greater impact. For collaboration, please contact us at <a href="mailto:zerowaste345@gmail.com">zerowaste345@gmail.com</a> or <a href="https://forms.gle/WMc6GmFnvD16wwQb8" target="_blank">click here</a> to reach our form.
+        </p>
+    </section>
+    
+    <!-- Second Code (Home Section) -->
+    <section id="home">
+        <h2>Home</h2>
+        <h3 id="about">About Us</h3>
+        <p id="about_text" style="display:none;">
+            Welcome to the Zero Waste Initiative. The "Zero Waste" initiative is an environmental movement aimed at addressing the pollution caused by agricultural and industrial waste.
+            <br> We believe that awareness and education are the foundations for change, so we strive to educate the community about the environmental impacts of this waste.
+            <br> We provide accessible educational resources and bring the community together through events and competitions to promote volunteerism.
+            <br> Through this initiative, we work to present innovative solutions and enhance collaboration with recycling companies to ensure a more sustainable future.
+        </p>
+    
+        <h3 id="goals">Our Goals</h3>
+        <p id="goals_text" style="display:none;">
+            The "Zero Waste" initiative aims to achieve several key goals:
+            <br>1. Raise Awareness: We work to educate the public about the environmental impact of agricultural and industrial waste, providing accessible learning materials and resources.
+            <br>2. Encourage Volunteerism: Through competitions and campaigns, we promote environmental volunteering with rewards such as certificates and medals.
+            <br>3. Report Pollution: We enable individuals to report pollution, helping us take collective action to protect our planet.
+            <br>4. Share Success Stories: We highlight the achievements of environmental initiatives, showcasing innovative solutions and community efforts.
+            <br>5. Promote Innovation: We provide opportunities to submit projects aimed at solving environmental issues, such as recycling plastic waste or addressing pollution problems.
+            <br>6. Collaborate with Recycling Companies: We aim to partner with recycling companies to create a network of sustainable solutions.
+        </p>
+    
+        <h3 id="volunteering">Benefits of Volunteering</h3>
+        <p id="volunteering_text" style="display:none;">
+            Volunteering is a great way to contribute to environmental protection while gaining valuable experience.
+            <br>Here are some of the benefits:
+            <br>1. Make a Difference: By volunteering, you directly contribute to reducing pollution and creating a cleaner, healthier environment.
+            <br>2. Learn New Skills: Volunteering helps you develop new skills, including teamwork, leadership, and problem-solving.
+            <br>3. Community Engagement: Volunteering brings people together, creating strong community bonds and networks.
+            <br>4. Recognition: After each event or significant contribution, you'll receive a volunteer participation certificate from "Zero Waste" for your efforts in protecting the environment.
+        </p>
+    </section>
+    
+    <script>
+        // Function to toggle display of content
+        function toggleContent(sectionId) {
+            var textElement = document.getElementById(sectionId + "_text");
+            textElement.style.display = textElement.style.display === "none" ? "block" : "none";
+        }
+    
+        // Add event listeners to h3 elements to toggle content
+        document.getElementById("user_contact").addEventListener("click", function() {
+            toggleContent("user_contact");
+        });
+    
+        document.getElementById("supporter_contact").addEventListener("click", function() {
+            toggleContent("supporter_contact");
+        });
+    
+        document.getElementById("company_contact").addEventListener("click", function() {
+            toggleContent("company_contact");
+        });
+    
+        document.getElementById("about").addEventListener("click", function() {
+            toggleContent("about");
+        });
+    
+        document.getElementById("goals").addEventListener("click", function() {
+            toggleContent("goals");
+        });
+    
+        document.getElementById("volunteering").addEventListener("click", function() {
+            toggleContent("volunteering");
+        });
+    </script>
+    
+    </body>
+    </html>
 
     <section id="programs">
         <h2>Our Programs</h2>
@@ -373,193 +537,116 @@
             <br>
             Each event will be designed to engage and empower participants, offering various activities ranging from community clean-ups to workshops on sustainable practices. We want everyone to feel involved and inspired to take action in their own lives.
             <br>
-            Stay tuned for more details about our upcoming events! Together, we can work towards a brighter, greener future. Let’s unite for this important cause and show that together, we can achieve great things!<br> You can share your achievements here to receive an official certificate <a href="https://forms.gle/B9i2bKpRVmzyphpC9" target="_blank"><br>
+            Stay tuned for more details about our upcoming events! Together, we can work towards a brighter, greener future. Let’s unite for this important cause and show that together, we can achieve great things!<br> You can share your achievements here to receive an official certificate <a href="https://forms.gle/1XfGmNMWvDMspM5n6" target="_blank"><br>
                 Here you can sell agricultural or industrial waste.
-                <a href="https://forms.gle/PiDQx4oGCJ9RRRFw6"target="_blank">
+                <a href="https://forms.gle/N4dnCRw81Jm9Rcux6"target="_blank">
                 <br>
                 Here you can report pollution.
                 <br>
-                <a href="https://forms.gle/4wUoULgkQHebWacP7"target="_blank"> 
+                <a href="https://forms.gle/Jpo3ZBh3JmMykJLD9"target="_blank"> 
                     Write your Achievement</h2>
                 </p>
 
     </section>
+   
+          
     <section id="awareness">
         <h2>Awareness</h2>
-        <h3 id="agricultural" style="display:none;">About Agricultural Waste</h3>
-        <br>
-
-        <video width="600" height="400" controls>
-            <source src="c:\Users\DELL\Downloads\WhatsApp Video 2024-10-15 at 1.43.24 PM.mp4" type="video/mp4">
-          </video>
-        <p style="display:none;">
-            
-            
-            Agricultural waste is one of the significant environmental challenges facing the world today, as it constitutes a large percentage of the total waste produced. This waste includes crop residues, rice husks, leaves, and spoiled fruits and vegetables, along with other materials generated from agricultural activities.
+        
+        <!-- Agriculture Waste Section -->
+        <h3 id="agriculture_waste" onclick="toggleContent('agriculture_waste')">Agriculture Waste</h3>
+        <p id="agriculture_waste_text" style="display:none;">
+            Agricultural waste refers to the byproducts of farming activities, such as crop residues, animal waste, and food processing waste. 
+            This waste often contributes to environmental pollution if not properly managed. However, with proper recycling and disposal methods, agricultural waste can be turned into valuable resources like compost, biogas, and even biofuels. Sustainable management of agricultural waste is essential to reduce its impact on the environment, improve soil health, and support sustainable farming practices.
+        </p>
+        
+        <!-- Industrial Waste Section -->
+        <h3 id="industrial_waste" onclick="toggleContent('industrial_waste')">Industrial Waste</h3>
+        <p id="industrial_waste_text" style="display:none;">
+            Industrial waste consists of materials produced during industrial operations, which may include chemicals, metals, plastics, and other hazardous substances. 
+            Improper disposal or treatment of industrial waste can lead to air, water, and soil contamination, posing serious health risks to humans and wildlife. 
+            Therefore, industries must adopt cleaner production methods and efficient waste management practices. Recycling and reusing industrial waste can minimize environmental damage and promote the circular economy, contributing to a more sustainable industrial landscape.
+        </p>
+        
+        <!-- Learning Resources Section -->
+        <h3 id="learning_resources" onclick="toggleContent('learning_resources')">Learning Resources</h3>
+        <p id="learning_resources_text" style="display:none;">
+            (Websites)<br>
+            1. Food and Agriculture Organization (FAO). (2018). The State of Food and Agriculture 2018: Rural Transformations and the Role of Agriculture. 
             <br>
-            Environmental Impacts of Agricultural Waste
+            <a href="https://www.fao.org/publications/sofa/2018/en/" target="_blank">Visit FAO</a>
             <br>
-            1. Pollution: When agricultural waste is left untreated, it can lead to soil and water pollution. Improper decomposition of this waste can release greenhouse gases and affect air quality.
-            
+            2. World Health Organization (WHO). (2020). Health and Environment: A Guide to the Links Between Health and Environmental Hazards. 
             <br>
-            2. Resource Loss: Agricultural waste represents a waste of valuable resources. Many of these materials can be reused in composting or as raw materials in other industries.
+            <a href="https://www.who.int/publications/i/item/health-and-environment" target="_blank">Visit WHO</a>
             <br>
-            
-            3. Impact on Biodiversity: Accumulated agricultural waste can lead to habitat degradation, adversely affecting biodiversity.
-            
+            3. United Nations Environment Programme (UNEP). (2016). Global Waste Management Outlook. 
             <br>
-            
-            Managing Agricultural Waste
+            <a href="https://www.unep.org/resources/report/global-waste-management-outlook" target="_blank">Visit UNEP</a>
             <br>
-            Effective management of agricultural waste requires innovative strategies aimed at minimizing its negative environmental impact. Here are some proposed solutions:
+            4. International Journal of Environmental Research and Public Health. (2021). Agricultural Waste Management: Current Challenges and Future Perspectives. 
             <br>
-            1. Recycling: Crop residues and organic waste can be transformed into compost, helping to improve soil fertility and reduce the need for chemical fertilizers.
-            
+            <a href="https://www.mdpi.com/journal/ijerph" target="_blank">Visit MDPI</a>
             <br>
-            2. Waste-to-Energy Conversion: Techniques such as anaerobic digestion can be used to convert agricultural waste into bioenergy, contributing to a reduction in reliance on conventional energy sources.
-            
+            5. Environmental Protection Agency (EPA). (2019). Sustainable Management of Food Basics. 
             <br>
-            3. Awareness and Education: Raising awareness among farmers and local communities about the importance of managing agricultural waste and its impact on the environment can encourage sustainable practices.
-            
+            <a href="https://www.epa.gov/sustainable-management-food" target="_blank">Visit EPA</a>
             <br>
-            
-            The "Zero Waste" Initiative and Its Role in Addressing Agricultural Waste
+            6. World Bank. (2021). Waste Management in Urban Areas: A Global Perspective. 
             <br>
-            As part of our "Zero Waste" initiative, we work to promote awareness about the dangers of agricultural waste and the need for effective management. We provide educational resources and invite the community to participate in volunteer events to clean the environment. Our goal is to encourage farmers and communities to adopt sustainable solutions for handling agricultural waste and contribute to creating a healthier environment.
+            <a href="https://www.worldbank.org/en/topic/wastemanagement" target="_blank">Visit World Bank</a>
             <br>
-            By collaborating with specialized recycling companies, we aim to build an effective network that enhances the sustainability of these resources and reduces their negative impact on the environment. Join us in these efforts, and together, let's build a cleaner and more sustainable future for everyone</p>
-        <h3 id="industrial" style="display:none;">About Industrial Waste</h3>
-        <p style="display:none;">Industrial waste is one of the prominent environmental issues that affect human health and the environment. This waste includes a wide range of materials produced during manufacturing and production processes, such as chemicals, heavy metals, oils, plastics, and waste generated from construction and demolition activities.
+            7. International Solid Waste Association (ISWA). (2020). Waste Management and Circular Economy: Best Practices and Guidelines. 
             <br>
-            Environmental Impacts of Industrial Waste
+            <a href="https://www.iswa.org/home/" target="_blank">Visit ISWA</a>
             <br>
-            1. Water Pollution: Industrial waste is a major source of water pollution, as toxic materials can seep into rivers and lakes, affecting aquatic life and threatening the health of local communities.
+            8. Kumar, R., & Bhattacharya, P. (2022). Innovations in Waste Management: Sustainable Approaches for Agriculture and Industry. 
             <br>
-            
-            2. Air Pollution: Industrial processes may release harmful gases and particulate matter into the air, leading to deteriorating air quality and an increase in respiratory illnesses among the population.
-            
+            <a href="https://www.sciencedirect.com/journal/journal-of-cleaner-production" target="_blank">Visit ScienceDirect</a>
             <br>
-            3. Soil Degradation: If not managed properly, industrial waste can leach chemicals into the soil, causing pollution that affects crop growth and leads to a loss of biodiversity.
-            
+            (Articles)
             <br>
-            
-            Managing Industrial Waste
+            1. "Agricultural Waste Management: A Review"
             <br>
-            Effective management of industrial waste requires strategies to minimize its negative environmental impact. Here are some proposed solutions:
+            <a href="https://www.sciencedirect.com/science/article/pii/S0961953414000523" target="_blank">Read Article</a>
             <br>
-            1. Recycling: Many industrial materials, such as metals and plastics, can be recycled, reducing waste volume and promoting sustainability.
-            
+            2. "Industrial Waste Management: Practices and Innovations"
             <br>
-            2. Waste Reduction: Encouraging companies to adopt clean manufacturing practices and improve production processes to minimize waste generation.
-            
+            <a href="https://www.mdpi.com/2071-1050/12/6/2495" target="_blank">Read Article</a>
             <br>
-            3. Safe Disposal: Establishing effective systems for safely disposing of industrial waste, including incineration or burial in specially designed landfills, while considering environmental safety.
-            
+            3. "Waste Management in Agriculture: A Systematic Review"
             <br>
-            4. Awareness and Education: Educating companies and local communities about the importance of managing industrial waste and ways to mitigate its negative impacts.
-            
-            
+            <a href="https://www.mdpi.com/2071-1050/12/1/70" target="_blank">Read Article</a>
             <br>
-            The "Zero Waste" Initiative and Its Role in Addressing Industrial Waste
+            4. "The Environmental Impact of Industrial Waste"
             <br>
-            As part of our "Zero Waste" initiative, we work to promote awareness of the dangers of industrial waste and the need for effective management. We provide educational resources and organize volunteer events to encourage community participation in environmental cleanup efforts.
+            <a href="https://www.researchgate.net/publication/320012925_The_Environmental_Impact_of_Industrial_Waste" target="_blank">Read Article</a>
             <br>
-            We aim to collaborate with specialized recycling companies to build an effective network that enhances resource sustainability and reduces the negative impacts of industrial waste on the environment.
+            5. "Challenges in Agricultural Waste Management"
             <br>
-            Join us in these efforts, and together, let’s build a cleaner and more sustainable future for everyone.</p>
-        <h3 id="resources" style="display:none;">Learning Resources</h3>
-        <p style="display:none;">(Websites)<br>
-            1. Food and Agriculture Organization (FAO). (2018). The State of Food and Agriculture 2018: Rural Transformations and the Role of Agriculture. Retrieved from FAO <br> Websitehttps:<a href="//www.fao.org/publications/sofa/2018/en/" target="_blank"></a><br>
-            2. World Health Organization (WHO). (2020). Health and Environment: A Guide to the Links Between Health and Environmental Hazards. Retrieved from WHO <br> Websitehttps:<a href="//www.who.int/publications/i/item/health-and-environment" target="_blank"></a><br>
-            3. United Nations Environment Programme (UNEP). (2016). Global Waste Management Outlook. Retrieved from UNEP  <br> Websitehttps:<a href="//www.unep.org/resources/report/global-waste-management-outlook" target="_blank"></a>" target="_blank"><br>
-            4. International Journal of Environmental Research and Public Health. (2021). Agricultural Waste Management: Current Challenges and Future Perspectives. Retrieved from MDPI <br> Website https:<a href="//www.mdpi.com/journal/ijerph" target="_blank"></a><br>
-            5. Environmental Protection Agency (EPA). (2019). Sustainable Management of Food Basics. Retrieved from EPA <br> Website <a href="https://www.epa.gov/sustainable-management-food" target="_blank"></a><br>
-            6. World Bank. (2021). Waste Management in Urban Areas: A Global Perspective. Retrieved from World Bank <br> Website <a href="https://www.worldbank.org/en/topic/wastemanagement" target="_blank"></a><br>
-            7. International Solid Waste Association (ISWA). (2020). Waste Management and Circular Economy: Best Practices and Guidelines. Retrieved from ISWA <br> Website <a href="https://www.iswa.org/home/" target="_blank"></a><br>
-            8. Kumar, R., & Bhattacharya, P. (2022). Innovations in Waste Management: Sustainable Approaches for Agriculture and Industry. In Journal of Cleaner Production. Retrieved from ScienceDirect <br><a href="https://www.sciencedirect.com/journal/journal-of-cleaner-production" target="_blank"></a> <br> (Articles)
+            <a href="https://www.frontiersin.org/articles/10.3389/fenvs.2021.667985/full" target="_blank">Read Article</a>
             <br>
-            1. "Agricultural Waste Management: A Review" <br>
-            Summary: This article reviews strategies for managing agricultural waste and modern techniques used in this field. <br>
-            [<a href="https://www.sciencedirect.com/science/article/pii/S0961953414000523" target="_blank"></a>]
+            6. "Innovative Solutions for Managing Industrial Waste"
             <br>
-            
-            2. "Industrial Waste Management: Practices and Innovations" <br>
-            Summary: This article discusses best practices and innovations in industrial waste management and their environmental impact. <br>
-            [<a href="https://www.mdpi.com/2071-1050/12/6/2495" target="_blank"></a>]
+            <a href="https://www.sciencedirect.com/science/article/pii/S0959652621007974" target="_blank">Read Article</a>
             <br>
-            
-            3. "Waste Management in Agriculture: A Systematic Review" <br>
-            Summary: This article provides a comprehensive review of waste management techniques in the agricultural sector and their sustainability impact. <br>
-            [<a href="https://www.mdpi.com/2071-1050/12/1/70" target="_blank"></a>]
+            7. "Understanding Agricultural Waste: Sources and Management Techniques"
             <br>
-            
-            4. "The Environmental Impact of Industrial Waste" <br>
-            Summary: This article reviews the environmental impact of industrial waste and suggests strategies to mitigate damage. <br>
-            [<a href="https://www.researchgate.net/publication/320012925_The_Environmental_Impact_of_Industrial_Waste" target="_blank"></a>]
-            <br>
-            
-            5. "Challenges in Agricultural Waste Management" <br>
-            Summary: This article discusses the challenges facing agricultural waste management and proposed methods to improve the situation. <br>
-            [<a href="https://www.frontiersin.org/articles/10.3389/fenvs.2021.667985/full" target="_blank"></a>]
-            <br>
-            
-            6. "Innovative Solutions for Managing Industrial Waste" <br>
-            Summary: This article explores innovative solutions for managing industrial waste and how they can be applied across various industries. <br>
-            [<a href="https://www.sciencedirect.com/science/article/pii/S0959652621007974" target="_blank"></a>] <br>
-            
-            
-            7. "Understanding Agricultural Waste: Sources and Management Techniques" <br>
-            Summary: This article provides an overview of sources of agricultural waste and the techniques used to manage it. <br>
-            [<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6138999/" target="_blank"></a>] <br> (Books)
-            1. "Waste Management Practices: Municipal, Hazardous, and Industrial" <br>
-            Author: John Pichtel <br>
-            Year of Publication: 2014 <br>
-            Publisher: CRC Press <br>
-            [<a href="https://www.routledge.com/Waste-Management-Practices-Municipal-Hazardous-and-Industrial/Pichtel/p/book/9781466572824" target="_blank"></a> ] <br>
-            
-            
-            2. "Agricultural Waste Management: A Comprehensive Guide" <br>
-            Author: R. L. H. De Boer <br>
-            Year of Publication: 2018 <br>
-            Publisher: Wiley-Blackwell <br>
-            [<a href="https://www.wiley.com/en-us/Agricultural+Waste+Management%3A+A+Comprehensive+Guide-p-9781119155977" target="_blank"></a>]<br>
-            
-            
-            3. "Industrial Waste: A Handbook for Management" <br>
-            Author: David J. C. Simmonds <br>
-            Year of Publication: 2016 <br>
-            Publisher: Springer <br>
-            [<a href="https://link.springer.com/book/10.1007/978-3-319-26843-6" target="_blank"></a>] <br>
-            
-            
-            4. "Waste: A Handbook for Management" <br>
-            Author: D. W. B. Jones <br>
-            Year of Publication: 2017 <br>
-            Publisher: Springer <br>
-            [<a href="https://link.springer.com/book/10.1007/978-3-319-59290-4" target="_blank"></a> ] <br>
-            
-            
-            5. "Circular Economy: Global Perspectives, Applications and Benefits" <br>
-            Authors: M. M. S. A. M. K. B. Z. K. M. S. H. L. B. A. P. M. H. D. N. A. K. G. J. S. L. M. H. <br>
-            Year of Publication: 2021<br>
-            Publisher: Springer <br>
-            [<a href="https://link.springer.com/book/10.1007/978-3-030-51529-5" target="_blank"></a>] <br>
-            
-            
-            6. "Waste Management: Concepts and Technologies" <br>
-            Authors: Shweta Bansal & Rakesh Kumar <br>
-            Year of Publication: 2021 <br>
-            Publisher: Springer <br>
-            [<a href="https://link.springer.com/book/10.1007/978-3-030-48783-1" target="_blank"></a>] <br>
-            
-            
-            7. "Handbook of Recycling: State-of-the-art for Practitioners, Engineers, and Scientists" <br>
-            Author: Elias R. D. K. H. M. M. R. E. K. <br>
-            Year of Publication: 2014 <br>
-            Publisher: Elsevier <br>
-            [<a href="https://www.elsevier.com/books/handbook-of-recycling/9780123965050" target="_blank"></a>] <br> </p>
+            <a href="https://www.researchgate.net/publication/311346987_Understanding_Agricultural_Waste_Sources_and_Management_Techniques" target="_blank">Read Article</a>
+        </p>
     </section>
+    
+    <script>
+        // Function to toggle display of content
+        function toggleContent(sectionId) {
+            var textElement = document.getElementById(sectionId + "_text");
+            textElement.style.display = textElement.style.display === "none" ? "block" : "none";
+        }
+    </script>
 
+    <footer>
+        <p>&copy; 2024 Zero Waste</p>
+    </footer>
     <section id="success">
         <h2>Success Stories</h2>
     
@@ -585,9 +672,6 @@
         </p>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Zero Waste</p>
-    </footer>
 
     <script>
         function toggleSection(sectionId) {
