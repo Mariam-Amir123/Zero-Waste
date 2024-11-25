@@ -500,24 +500,36 @@ p {
     </section>
    
           
-    <section id="awareness">
-        <h2>Awareness</h2>
-        
-        <!-- Agriculture Waste Section -->
-        <h3 id="agriculture_waste" onclick="toggleContent('agriculture_waste')">Agriculture Waste</h3>
-        <p id="agriculture_waste_text" style="display:none;">
-            Agricultural waste refers to the byproducts of farming activities, such as crop residues, animal waste, and food processing waste. 
-            This waste often contributes to environmental pollution if not properly managed. However, with proper recycling and disposal methods, agricultural waste can be turned into valuable resources like compost, biogas, and even biofuels. Sustainable management of agricultural waste is essential to reduce its impact on the environment, improve soil health, and support sustainable farming practices.
-        </p>
-        
-        <!-- Industrial Waste Section -->
-        <h3 id="industrial_waste" onclick="toggleContent('industrial_waste')">Industrial Waste</h3>
-        <p id="industrial_waste_text" style="display:none;">
-            Industrial waste consists of materials produced during industrial operations, which may include chemicals, metals, plastics, and other hazardous substances. 
-            Improper disposal or treatment of industrial waste can lead to air, water, and soil contamination, posing serious health risks to humans and wildlife. 
-            Therefore, industries must adopt cleaner production methods and efficient waste management practices. Recycling and reusing industrial waste can minimize environmental damage and promote the circular economy, contributing to a more sustainable industrial landscape.
-        </p>
-        
+ <section id="awareness">
+    <h2>Awareness</h2>
+    
+    <!-- Agriculture Waste Section -->
+    <h3 id="agriculture_waste" onclick="toggleContent('agriculture_waste_text')">Agriculture Waste</h3>
+    <p id="agriculture_waste_text" style="display:none;">
+        Agricultural waste refers to the byproducts of farming activities, such as crop residues, animal waste, and food processing waste. 
+        This waste often contributes to environmental pollution if not properly managed. However, with proper recycling and disposal methods, agricultural waste can be turned into valuable resources like compost, biogas, and even biofuels. Sustainable management of agricultural waste is essential to reduce its impact on the environment, improve soil health, and support sustainable farming practices.
+    </p>
+    
+    <!-- Industrial Waste Section -->
+    <h3 id="industrial_waste" onclick="toggleContent('industrial_waste_text')">Industrial Waste</h3>
+    <p id="industrial_waste_text" style="display:none;">
+        Industrial waste consists of materials produced during industrial operations, which may include chemicals, metals, plastics, and other hazardous substances. 
+        Improper disposal or treatment of industrial waste can lead to air, water, and soil contamination, posing serious health risks to humans and wildlife. 
+        Therefore, industries must adopt cleaner production methods and efficient waste management practices. Recycling and reusing industrial waste can minimize environmental damage and promote the circular economy, contributing to a more sustainable industrial landscape.
+    </p>
+</section>
+
+<script>
+function toggleContent(id) {
+    // إخفاء أو إظهار النص المرتبط بـ id
+    const element = document.getElementById(id);
+    if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
         <!-- Learning Resources Section -->
         <h3 id="learning_resources" onclick="toggleContent('learning_resources')">Learning Resources</h3>
         <p id="learning_resources_text" style="display:none;">
