@@ -499,7 +499,7 @@ p {
 </section>
     </section>
    
-         <section id="awareness">
+        <section id="awareness">
     <h2>Awareness</h2>
     
     <!-- Agriculture Waste Section -->
@@ -516,11 +516,11 @@ p {
         Improper disposal or treatment of industrial waste can lead to air, water, and soil contamination, posing serious health risks to humans and wildlife. 
         Therefore, industries must adopt cleaner production methods and efficient waste management practices. Recycling and reusing industrial waste can minimize environmental damage and promote the circular economy, contributing to a more sustainable industrial landscape.
     </p>
-    
+
     <!-- Learning Resources Section -->
     <h3 id="learning_resources" onclick="toggleContent('learning_resources_text')">Learning Resources</h3>
     <p id="learning_resources_text" style="display:none;">
-        <strong>Websites</strong><br>
+        (Websites)<br>
         1. Food and Agriculture Organization (FAO). (2018). The State of Food and Agriculture 2018: Rural Transformations and the Role of Agriculture. 
         <br>
         <a href="https://www.fao.org/publications/sofa/2018/en/" target="_blank">Visit FAO</a>
@@ -553,7 +553,7 @@ p {
         <br>
         <a href="https://www.sciencedirect.com/journal/journal-of-cleaner-production" target="_blank">Visit ScienceDirect</a>
         <br>
-        <strong>Articles</strong>
+        (Articles)
         <br>
         1. "Agricultural Waste Management: A Review"
         <br>
@@ -589,7 +589,7 @@ p {
     // Function to toggle display of content
     function toggleContent(sectionId) {
         var textElement = document.getElementById(sectionId + "_text");
-        textElement.style.display = textElement.style.display === "none" ? "block" : "none";
+        textElement.style.display = (textElement.style.display === "none" || textElement.style.display === "") ? "block" : "none";
     }
 </script>
 
